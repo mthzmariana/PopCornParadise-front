@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('scr/Fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f77f00;
+    padding: 10px 20px;
+}
+
+.navbar .nav-links a {
+    color: #212529;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0px;
+    display: block;
+    font-family: 'Figtree-Medium', sans-serif;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+.navbar .nav-links {
+    display: flex;
+}
+
+.MiniLogo {
+    background-color: #f77f00;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.MiniLogo:hover {
+    transform: scale(1.125);
+}
+.MiniLogo svg {
+    vertical-align: middle;
+}
+  
