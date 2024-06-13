@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Figtree-Bold';
+    src: url('scr/Fonts/Figtree-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('scr/Fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Light';
+    src: url('scr/Fonts/Figtree-Light.ttf') format('truetype');
+}
+
+.footer h1{
+    font-family: 'Figtree-Medium', sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+.terminos{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.terminos p{
+    font-family: 'Figtree-Bold', sans-serif;
+    margin: 8px;
+}
+
+.copyright{
+    text-align: center;
+    justify-content: center;
+}
+
+.copyright p{
+    font-family: 'Figtree-Light', sans-serif;
+    margin: 8px;
+}
+
+.footer {
+    align-items: center;
+    background-color: #212529;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+
+
