@@ -26,7 +26,7 @@
     color: #212529;
     text-decoration: none;
     padding: 10px 15px;
-    margin: 0;
+    margin: 0px;
     display: block;
     font-family: 'Figtree-Medium', sans-serif;
 }
@@ -39,8 +39,8 @@
 .MiniLogo {
     background-color: #f77f00;
     border: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     cursor: pointer;
 }
 
@@ -67,7 +67,7 @@
         width: 100%;
         position: absolute;
         top: 60px;
-        left: 0;
+        left: 0px;
         background-color: #f77f00;
     }
 
