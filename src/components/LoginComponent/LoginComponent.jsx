@@ -1,9 +1,11 @@
-<<<<<<< Updated upstream
-import "./LoginComponent.css";
-import React, { useEffect } from 'react';
+import './LoginComponent.css';
+import React, { useState, useEffect  } from 'react';
+import LogoSinFondo from "../../assets/LogoSinFondo.png";
 import { useNavigate } from 'react-router-dom';
 
-function LoginComponent({handleNavbar, handleFooter}) {
+function LoginComponent({ handleNavbar, handleFooter }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,20 +17,6 @@ function LoginComponent({handleNavbar, handleFooter}) {
       handleFooter(true);
     };
   }, [handleNavbar, handleFooter]);
-
-  return (
-    <div>
-        <h1>Iniciar sesión</h1>
-=======
-import React, { useState } from 'react';
-import './LoginComponent.css';
-import LogoSinFondo from "../../assets/LogoSinFondo.png";
-import { useNavigate } from 'react-router-dom';
-
-function LoginComponent() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleLogin = () => {
     const userData = { email, password };
@@ -89,7 +77,6 @@ function LoginComponent() {
           <p className="text-black">¿No tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
         </form>
       </div>
->>>>>>> Stashed changes
     </div>
   );
 }
