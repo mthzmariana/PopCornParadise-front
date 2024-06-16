@@ -1,21 +1,23 @@
-<<<<<<< Updated upstream
-=======
-import React, { useState } from "react";
->>>>>>> Stashed changes
 import "./RegistroComponent.css";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function RegistroComponent() {
-<<<<<<< Updated upstream
-
-  return (
-    <div>
-        <h1>Registro</h1>
-=======
+function RegistroComponent({handleNavbar, handleFooter}) {
+  const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [edad, setEdad] = useState(0);
-  
+
+  useEffect(() => {
+    handleNavbar(false);
+    handleFooter(false);
+    
+    return () => {
+      handleNavbar(true);
+      handleFooter(true);
+    };
+  }, [handleNavbar, handleFooter]);
 
   const sendData = () => {
     const dataToSend = {
@@ -137,7 +139,6 @@ function RegistroComponent() {
           <p className="message">¿Ya estás registrado? <a href="/login">Inicia sesión</a></p>
         </form>
       </div>
->>>>>>> Stashed changes
     </div>
   );
 }
