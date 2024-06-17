@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f77f00;
+    background-color: #f7931e;
     padding: 10px 20px;
     position: relative;
 }
@@ -37,7 +37,7 @@
 }
 
 .MiniLogo {
-    background-color: #f77f00;
+    background-color: #f7931e;
     border: none;
     padding: 0px;
     margin: 0px;
@@ -68,7 +68,7 @@
         position: absolute;
         top: 60px;
         left: 0px;
-        background-color: #f77f00;
+        background-color: #f7931e;
     }
 
     .nav-links-container.active {

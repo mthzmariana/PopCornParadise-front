@@ -1,6 +1,7 @@
 import "./RegistroComponent.css";
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LogoSinFondo from "../../assets/LogoSinFondo.png";
 
 function RegistroComponent({handleNavbar, handleFooter}) {
   const navigate = useNavigate();
