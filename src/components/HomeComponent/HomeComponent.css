@@ -14,7 +14,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 60px;
-	margin: 70px;
+	margin: 60px;
 }
 
 .contenedor-izquierdo h1 {
@@ -41,6 +41,7 @@
 	border-radius: 15px;
 	justify-content: center;
 	align-items: center;
+	transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .cuadrado-naranja:hover {
