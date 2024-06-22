@@ -47,5 +47,33 @@
     color: #ffffff;
 }
 
+@media (max-width: 768px) {
 
+    .footer h1{
+        font-family: 'Figtree-Medium', sans-serif;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .terminos p{
+        font-family: 'Figtree-Bold', sans-serif;
+        margin: 8px;
+        font-size: 0.8rem;
+    }
+
+    .copyright p{
+        font-family: 'Figtree-Light', sans-serif;
+        margin: 8px;
+        font-size: 0.8rem;
+    }
+    
+    .footer {
+        align-items: center;
+        background-color: #212529;
+        padding: 5px 10px;
+        color: #ffffff;
+    }
+
+}
 

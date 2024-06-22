@@ -4,7 +4,7 @@ const LogoSinRelleno = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="60" height="60"
+      width="90%" height="90%"
       xmlSpace="preserve"
       viewBox="0 0 478 495.6"
       {...props}
@@ -30,3 +30,5 @@ const LogoSinRelleno = (props) => {
     </svg>
   );
 };
+
+export default LogoSinRelleno
