@@ -1,0 +1,75 @@
+.contact-page {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+    padding: 0 20px; /* Añade un poco de espacio a los lados */
+    flex-wrap: wrap;
+}
+
+.form-container {
+    background: #f77f00;
+    max-width: 360px;
+    padding: 45px;
+    text-align: flex-start;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 60px;
+
+}
+
+.form-container input, 
+.form-container textarea {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 2px solid #ffffff;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: black;
+    border-radius: 60px;
+}
+
+.form-container button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #000000;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+.form-container button:hover,
+.form-container button:active,
+.form-container button:focus {
+    background: #ddac83;
+}
+
+.form-container .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form-container .message a {
+    color: #af4c4c;
+    text-decoration: none;
+}
+
+.logo-container {
+    flex: 0 0 auto; /* No crece ni se encoge */
+}
+
+.logo-container img {
+    width: 60%; /* Ocupa el ancho disponible */
+    height: auto; /* Mantiene la proporción */
+}
