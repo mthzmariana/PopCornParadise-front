@@ -1,0 +1,50 @@
+.cont-acerca {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.titulo-acerca {
+    margin: 20px;
+    padding: 10px;
+}
+
+.cont-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 35px 10px;
+    padding: 10px 10px 35px 10px;
+}
+
+.cuadro-info {
+    flex: 1;
+    margin: 15px 70px 40px 70px;
+    padding: 10px 65px 35px 65px;
+    border: 2px solid #f7931e;
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cuadro-info:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.555)); 
+}
+
+.cuadro-info p {
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+
+    .cont-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cuadro-info {
+        width: 100%; 
+        margin: 15px 0px; 
+    }
+}

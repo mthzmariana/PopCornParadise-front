@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f77f00;
+    background-color: #f7931e;
     padding: 10px 20px;
     position: relative;
 }
@@ -29,6 +29,7 @@
     margin: 0px;
     display: block;
     font-family: 'Figtree-Medium', sans-serif;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .navbar a:hover {
@@ -37,11 +38,12 @@
 }
 
 .MiniLogo {
-    background-color: #f77f00;
+    background-color: #f7931e;
     border: none;
     padding: 0px;
     margin: 0px;
     cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .MiniLogo:hover {
@@ -68,7 +70,7 @@
         position: absolute;
         top: 60px;
         left: 0px;
-        background-color: #f77f00;
+        background-color: #f7931e;
     }
 
     .nav-links-container.active {
