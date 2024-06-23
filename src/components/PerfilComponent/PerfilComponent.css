@@ -1,0 +1,117 @@
+.perfil-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.perfil-sidebar {
+  width: 25%;
+  padding: 20px;
+  background-color: #fFF;
+}
+
+.perfil-info {
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #f77f00;
+}
+
+.perfil-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.perfil-details {
+  margin-top: 10px;
+}
+
+.perfil-details h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.perfil-details p {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.perfil-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.btn-logout {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #f77f00;
+  color: white;
+  text-align: center;
+}
+
+.perfil-main {
+  width: 75%;
+  padding: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las películas */
+  justify-content: center; /* Centrar las películas */
+  margin-top: 20px;
+}
+
+.movie-item {
+  text-align: center;
+  flex: 1 1 calc(33.333% - 20px); /* Tres películas por fila con espacio entre ellas */
+  max-width: 300px; /* Ancho máximo del contenedor de la película */
+  margin-bottom: 20px; /* Espacio inferior para cada contenedor de película */
+}
+
+.movie-item img {
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  border-radius: 10px;
+}
+
+.movie-item p {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.perfil-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil-buttons .btn-link {
+  width: 48%;
+  display: inline-block;
+}
+
+.btn-edit {
+  width: 100%; 
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #f77f00;
+  color: white;
+  text-align: center;
+  box-sizing: border-box; 
+}

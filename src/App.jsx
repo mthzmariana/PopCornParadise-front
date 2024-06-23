@@ -8,23 +8,29 @@ import RegistroComponent from "./components/RegistroComponent/RegistroComponent"
 import LoginComponent from "./components/LoginComponent/LoginComponent";
 import PeliculasComponent from "./components/PeliculasComponent/PeliculasComponent";
 import PerfilComponent from "./components/PerfilComponent/PerfilComponent";
+import EditUserComponent from "./components/EditUserComponent/EditUserComponent";
+import { UserProvider } from './contexts/UserContext'; // Importa el UserProvider
 
 function App() {
   return (
-    <Router>
-      <div>
-        <NavbarComponent />
-        <Routes>
-          <Route exact path="/" element={<HomeComponent />} />
-          <Route exact path="/acerca-de" element={<AcercaComponent />} />
-          <Route exact path="/contacto" element={<ContactoComponent />} />
-          <Route exact path="/registro" element={<RegistroComponent />} />
-          <Route exact path="/login" element={<LoginComponent />} />
-          <Route exact path="/peliculas" element={<PeliculasComponent />} />
-          <Route exact path="/perfil" element={<PerfilComponent />} />
-        </Routes>
-      </div>
-    </Router>
+    <UserProvider>
+      <Router>
+        <div>
+          <NavbarComponent />
+          <Routes>
+            <Route exact path="/" element={<HomeComponent />} />
+            <Route exact path="/acerca-de" element={<AcercaComponent />} />
+            <Route exact path="/contacto" element={<ContactoComponent />} />
+            <Route exact path="/registro" element={<RegistroComponent />} />
+            <Route exact path="/login" element={<LoginComponent />} />
+            <Route exact path="/peliculas" element={<PeliculasComponent />} />
+            <Route exact path="/perfil" element={<PerfilComponent />} />
+            <Route exact path="/editar-perfil/:id" element={<EditUserComponent />} />
+
+            </Routes>
+        </div>
+      </Router>
+    </UserProvider>
   );
 }
 

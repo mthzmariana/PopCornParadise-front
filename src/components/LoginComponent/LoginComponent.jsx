@@ -1,23 +1,18 @@
-<<<<<<< Updated upstream
-import "./LoginComponent.css";
-
-function LoginComponent() {
-
-  return (
-    <div>
-        <h1>Iniciar sesión</h1>
-=======
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './LoginComponent.css';
 import LogoSinFondo from "../../assets/LogoSinFondo.png";
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../contexts/UserContext';
 
 function LoginComponent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+
     const userData = { email, password };
     const settings = {
       method: 'POST',
@@ -37,7 +32,9 @@ function LoginComponent() {
       .then(data => {
         console.log('Respuesta del servidor:', data);
         alert('Inicio de sesión exitoso');
-        navigate('/peliculas');
+        localStorage.setItem('remember_token', data.rememberToken);
+        setUser(data.user); // Establece el usuario en el contexto
+        navigate('/perfil'); // Navega a la ruta del perfil
       })
       .catch(error => {
         console.error('Error:', error);
@@ -48,9 +45,9 @@ function LoginComponent() {
   return (
     <div className="login-page">
       <div className="formL">
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="img-sm">
-            <img src={LogoSinFondo} alt="LogoL"/>
+            <img src={LogoSinFondo} alt="LogoL" />
           </div>
           <div>
             <input
@@ -59,6 +56,7 @@ function LoginComponent() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Correo"
+              required
             />
           </div>
           <div>
@@ -68,15 +66,15 @@ function LoginComponent() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Contraseña"
+              required
             />
           </div>
-          <button type="button" onClick={handleLogin}>Login</button>
+          <button type="submit">Login</button>
           <br />
           <br />
           <p className="text-black">¿No tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
         </form>
       </div>
->>>>>>> Stashed changes
     </div>
   );
 }

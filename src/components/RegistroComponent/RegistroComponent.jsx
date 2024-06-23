@@ -1,16 +1,6 @@
-<<<<<<< Updated upstream
-=======
-import React, { useState } from "react";
->>>>>>> Stashed changes
 import "./RegistroComponent.css";
 
 function RegistroComponent() {
-<<<<<<< Updated upstream
-
-  return (
-    <div>
-        <h1>Registro</h1>
-=======
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -137,7 +127,6 @@ function RegistroComponent() {
           <p className="message">¿Ya estás registrado? <a href="/login">Inicia sesión</a></p>
         </form>
       </div>
->>>>>>> Stashed changes
     </div>
   );
 }

@@ -1,7 +1,15 @@
+import React, { useContext, useEffect } from 'react';
 import "./NavbarComponent.css";
 import MiniLogo from "../../icons/minilogo.jsx";
+import { UserContext } from '../../contexts/UserContext';
 
 function NavbarComponent() {
+  const { user } = useContext(UserContext);
+
+  useEffect(() => {
+    console.log('Usuario en NavbarComponent:', user);
+  }, [user]);
+
   return (
     <div>
       <nav className="navbar">
@@ -16,8 +24,14 @@ function NavbarComponent() {
           <a href="/contacto">Contacto</a>
         </div>
         <div className="nav-links">
-          <a href="/login">Iniciar sesión</a>
-          <a href="/registro">Registrarse</a>
+          {user ? (
+            <span>{user.user}</span>
+          ) : (
+            <>
+              <a href="/login">Iniciar sesión</a>
+              <a href="/registro">Registrarse</a>
+            </>
+          )}
         </div>
       </nav>
     </div>
