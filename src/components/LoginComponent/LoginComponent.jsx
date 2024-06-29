@@ -4,7 +4,7 @@ import LogoSinFondo from "../../assets/LogoSinFondo.png";
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
 
-function LoginComponent() {
+function LoginComponent({ handleNavbar, handleFooter }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
