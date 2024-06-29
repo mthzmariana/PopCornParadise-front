@@ -33,6 +33,16 @@ function NavbarComponent() {
             </>
           )}
         </div>
+        <button
+          className="mobile-menu-icon"
+          onClick={() => {
+            document
+              .querySelector(".nav-links-container")
+              .classList.toggle("active");
+          }}
+        >
+          ☰
+        </button>
       </nav>
     </div>
   );
