@@ -1,11 +1,28 @@
 import "./RegistroComponent.css";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import LogoSinFondo from "../../assets/LogoSinFondo.png";
 
+<<<<<<< HEAD
 function RegistroComponent() {
+=======
+function RegistroComponent({handleNavbar, handleFooter}) {
+  const navigate = useNavigate();
+>>>>>>> b036e6d48a1d13f868e7a684d987418eb7bf0ec5
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [edad, setEdad] = useState(0);
-  
+
+  useEffect(() => {
+    handleNavbar(false);
+    handleFooter(false);
+    
+    return () => {
+      handleNavbar(true);
+      handleFooter(true);
+    };
+  }, [handleNavbar, handleFooter]);
 
   const sendData = () => {
     const dataToSend = {

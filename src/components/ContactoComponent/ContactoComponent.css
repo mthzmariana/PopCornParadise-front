@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('scr/Fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Light';
+    src: url('scr/Fonts/Figtree-Light.ttf') format('truetype');
+}
+
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    text-align: center;
+}
+
+.cont-img-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.elemento-form {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cont-formulario {
+    background: #f77f00;
+    max-width: 350px;
+    max-height: 400px;
+    padding: 50px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 35px;
+    text-align: left;
+}
+
+.label-form {
+    font-family: 'Figtree-Medium', sans-serif;
+    font-size: 20px;
+}
+
+.input-form {
+    font-family: 'Figtree-Light', sans-serif;
+    outline: 0;
+    background-color: #ffffff;
+    width: 100%;
+    border: 1.5px solid #ffffff;
+    color: #212529;
+    border-radius: 20px;
+    margin: 15px 0 15px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.button-env {
+    width: 100%;
+    cursor: pointer;
+    background: #ffffff;
+    color: #212529;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 0px;
+    font-size: 16px;
+    transition: all .3s ease;
+}
+
+.button-env:hover {
+    transform: scale(1.125);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+.logo-naranja{
+    text-align: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+
+    .cont-img-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .elemento-form {
+        margin: 15px 0px;
+    }
+
+    .claqueta {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cont-formulario {
+        margin: 15px 0px;
+        padding: 30px;
+    }
+}
