@@ -82,7 +82,9 @@ function RegistroComponent({handleNavbar, handleFooter}) {
       <div className="formR">
         <form onSubmit={handleSubmit}>
           <div className="img-sm">
-            <img src={LogoSinFondo} alt="LogoL" />
+            <a href="/">
+              <img src={LogoSinFondo} alt="LogoL" />
+            </a>
           </div>
           <div>
             <input
