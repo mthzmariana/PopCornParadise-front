@@ -9,10 +9,9 @@ import RegistroComponent from "./components/RegistroComponent/RegistroComponent"
 import LoginComponent from "./components/LoginComponent/LoginComponent";
 import PeliculasComponent from "./components/PeliculasComponent/PeliculasComponent";
 import PerfilComponent from "./components/PerfilComponent/PerfilComponent";
-import EditUserComponent from "./components/EditUserComponent/EditUserComponent"; // Importa EditUserComponent
-import FooterComponent from "./components/FooterComponent/FooterComponent"; // Importa FooterComponent
-import { UserProvider } from './contexts/UserContext'; // Importa el UserProvider
-
+import EditUserComponent from "./components/EditUserComponent/EditUserComponent";
+import FooterComponent from "./components/FooterComponent/FooterComponent";
+import { UserProvider } from './contexts/UserContext'; 
 import AdminTemplate from './templates/AdminTemplate';
 
 function App() {
@@ -34,24 +33,8 @@ function App() {
                     <Route path="/" element={<HomeComponent />} />
                     <Route path="/acerca-de" element={<AcercaComponent />} />
                     <Route path="/contacto" element={<ContactoComponent />} />
-                    <Route
-                      path="/registro"
-                      element={
-                        <RegistroComponent
-                          handleNavbar={setNavbarFlag}
-                          handleFooter={setFooterFlag}
-                        />
-                      }
-                    />
-                    <Route
-                      path="/login"
-                      element={
-                        <LoginComponent
-                          handleNavbar={setNavbarFlag}
-                          handleFooter={setFooterFlag}
-                        />
-                      }
-                    />
+                    <Route path="/registro" element={<RegistroComponent handleNavbar={setNavbarFlag} handleFooter={setFooterFlag}/>} />
+                    <Route path="/login" element={<LoginComponent handleNavbar={setNavbarFlag} handleFooter={setFooterFlag} />}/>
                     <Route path="/peliculas" element={<PeliculasComponent />} />
                     <Route path="/perfil" element={<PerfilComponent />} />
                     <Route path="/editar-perfil/:id" element={<EditUserComponent />} />

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './LoginComponent.css';
 import LogoSinFondo from "../../assets/LogoSinFondo.png";
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,16 @@ function LoginComponent({ handleNavbar, handleFooter }) {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
 
+  useEffect(() => {
+    handleNavbar(false);
+    handleFooter(false);
+
+    return () => {
+      handleNavbar(true);
+      handleFooter(true);
+    };
+  }, [handleNavbar, handleFooter]);
+  
   const handleLogin = (e) => {
     e.preventDefault();
 
