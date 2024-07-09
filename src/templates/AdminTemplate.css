@@ -1,0 +1,16 @@
+.flex {
+    display: flex;
+  }
+  
+  .flex-1 {
+    flex: 1;
+  }
+  
+  .ml-64 {
+    margin-left: 4rem; /* 64 pixels */
+  }
+  
+  .p-10 {
+    padding: 1.25rem; /* 10 pixels */
+  }
+  

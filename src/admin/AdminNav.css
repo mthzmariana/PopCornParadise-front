@@ -1,0 +1,95 @@
+:root {
+    --blanco: #ffffff;
+    --naranja: #f7931e;
+    --negro: #000000;
+}
+
+.admin-nav {
+    background-color: var(--naranja);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Distribuir espacio entre los elementos */
+    align-items: center;
+    width: calc(100% - 16rem); /* Ajusta según el ancho de tu sidebar */
+    position: fixed;
+    top: 0;
+    left: 16rem; /* Ajusta según el ancho de tu sidebar */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 4px -2px black; /* Sombra negra debajo */
+}
+
+.admin-nav .input {
+    padding-right: 2rem; /* Asegura espacio para el icono */
+}
+
+.admin-nav .icon {
+    width: 1rem; /* Tamaño del icono */
+    height: 1rem; /* Tamaño del icono */
+    line-height: 1rem;
+    position: absolute;
+    color: var(--naranja);
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.admin-nav a {
+    display: flex;
+    align-items: center;
+    position: relative; /* Necesario para ajustar el subrayado */
+    padding-bottom: 5px; /* Espaciado inferior para el subrayado */
+    color: var(--blanco); /* Color de texto blanco */
+    text-decoration: none; /* Quitar subrayado predeterminado */
+}
+
+.admin-nav a i {
+    margin-right: 0.5rem;
+}
+
+.admin-nav a span {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.admin-nav .search-admin { 
+    padding: 0.5rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    width: 200px; /* Ancho del input */
+}
+
+.admin-nav .user-info {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 4rem; /* Ajusta la distancia desde el borde derecho */
+}
+
+.admin-nav .user-info img {
+    width: 2rem; /* Tamaño de la foto de perfil */
+    height: 2rem; /* Tamaño de la foto de perfil */
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    border: 2px solid var(--blanco); /* Borde blanco */
+}
+
+.admin-nav .user-info span {
+    color: var(--blanco);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    background: var(--blanco) !important;
+}

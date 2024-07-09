@@ -1,0 +1,104 @@
+:root {
+    --blanco: #ffffff;
+    --naranja: #f7931e;
+    --negro: #000000;
+}
+
+.admin-sidebar {
+    height: 100vh;
+    width: 16rem;
+    background-color: #000000;
+    color: var(--blanco); /* Cambiamos el color del texto a blanco */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.user-info {
+    text-align: center;
+    color: var(--blanco); /* Cambiamos el color del nombre del usuario a blanco */
+}
+
+.admin-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border: 4px solid var(--naranja);
+}
+
+ul {
+    list-style-type: none; /* Quitamos la decoración del li */
+    padding: 0;
+    margin: 0;
+}
+
+.li-sidebar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    color: var(--naranja);
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .li-sidebar .icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--naranja); 
+  }
+
+  .li-sidebar a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none; 
+    color: var(--naranja); 
+  }
+
+  .li-sidebar a:hover {
+    color: var(--naranja-oscuro); 
+  }
+
+  .li-sidebar a.active {
+    font-weight: bold; 
+  }
+
+  .li-sidebar .ml-4 {
+    margin-left: 1rem; 
+  }
+
+
+.cerrar-sesion {
+    margin-top: 110px;
+    color: var(--naranja); 
+}
+
+.cerrar-sesion button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
