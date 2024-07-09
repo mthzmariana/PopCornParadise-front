@@ -56,9 +56,12 @@ function LoginComponent({ handleNavbar, handleFooter }) {
     <div className="login-page">
       <div className="formL">
         <form onSubmit={handleLogin}>
-          <div className="img-sm">
-            <img src={LogoSinFondo} alt="LogoL" />
+        <div className="img-sm">
+            <a href="/">
+              <img src={LogoSinFondo} alt="LogoL" />
+            </a>
           </div>
+          
           <div>
             <input
               className="input-box"

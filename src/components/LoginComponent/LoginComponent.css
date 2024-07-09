@@ -1,3 +1,9 @@
+/* Estilos generales */
+body {
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
 .login-page {
   background-image: url('../../assets/FondoLogin.jpg');
   background-size: cover;
@@ -51,9 +57,7 @@
   border-radius: 60px;
 }
 
-.formL button:hover,
-.form button:active,
-.form button:focus {
+.formL button:hover, .form button:active, .form button:focus {
   background: #dd8383;
 }
 
@@ -70,18 +74,52 @@
 
 .formL .img-sm {
   text-align: center;
-  width: 100%;
+  width: 100%; /* Aumentado el ancho */
 }
 
 .formL .img-sm img {
-  width: 400px;
-  height: auto;
+  width: 400px; /* Tamaño de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
   display: block;
-  margin: -50px -20px 0;
+  margin: -50px -20px 0; /* Centra la imagen horizontalmente */
+  transition: transform 0.3s ease;
 }
 
-body {
-  background: #ffffff;
-  font-family: "Roboto", sans-serif;
+.formL .img-sm img:hover {
+  transform: scale(1.1); /* Agrandar la imagen al pasar el cursor por encima */
+}
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .formL {
+    max-width: 300px;
+    padding: 30px;
+    margin: 0 auto 80px;
+  }
+
+  .formL input, .formL button {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .formL .img-sm img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formL {
+    max-width: 260px;
+    padding: 20px;
+    margin: 0 auto 60px;
+  }
+
+  .formL input, .formL button {
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .formL .img-sm img {
+    width: 250px;
+  }
 }
