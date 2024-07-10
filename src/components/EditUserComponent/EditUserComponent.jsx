@@ -83,7 +83,7 @@ const EditUserComponent = () => {
 
   return (
     <div className="edit-user-page">
-      <div className="formL">
+      <div className="formU">
         <form onSubmit={editarUsuario}>
           <div className="img-sm">
             <img src={LogoSinFondo} alt="LogoL" />
