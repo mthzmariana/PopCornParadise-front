@@ -1,10 +1,11 @@
+import Carrito from "../Carrito";
 import "./PeliculasComponent.css";
 
 function PeliculasComponent() {
 
   return (
     <div>
-        <h1>Películas</h1>
+        <Carrito></Carrito>
     </div>
   );
 }
