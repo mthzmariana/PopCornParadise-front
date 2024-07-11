@@ -1,0 +1,63 @@
+.permiso-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.permiso-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.permiso-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.permiso-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f7931e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.permiso-form button:hover {
+    background-color: #e58100;
+}
+
+.permiso-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.permiso-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.permiso-list li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #f7931e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.permiso-list li button:hover {
+    background-color: #e58100;
+}

@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Figtree-Bold';
+    src: url('scr/Fonts/Figtree-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('scr/Fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Light';
+    src: url('scr/Fonts/Figtree-Light.ttf') format('truetype');
+}
+
 .cont-acerca {
     text-align: center;
     margin: 0px;
@@ -7,6 +22,8 @@
 .titulo-acerca {
     margin: 20px;
     padding: 10px;
+    font-family: 'Figtree-Bold', sans-serif;
+    font-size: 2rem;
 }
 
 .cont-info {
@@ -14,6 +31,7 @@
     justify-content: space-between;
     margin: 10px 10px 35px 10px;
     padding: 10px 10px 35px 10px;
+    font-family: 'Figtree-Medium', sans-serif;
 }
 
 .cuadro-info {
@@ -26,6 +44,11 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.cuadro-info h2{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 .cuadro-info:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.555)); 
@@ -33,6 +56,7 @@
 
 .cuadro-info p {
     text-align: left;
+    font-family: 'Figtree-Light', sans-serif;
 }
 
 

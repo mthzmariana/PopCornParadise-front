@@ -12,7 +12,7 @@ const AdminNav = () => {
             <div className="flex space-x-4">
                 <a href="/" className="text-white flex items-center space-x-2 hvr-underline-from-center">
                     <i className="fas fa-home w-4 h-4"></i>
-                    <span>INICIO</span>
+                    <span>Inicio</span>
                 </a>
               
             </div>

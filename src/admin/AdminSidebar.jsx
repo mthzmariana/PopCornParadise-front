@@ -60,6 +60,18 @@ const AdminSidebar = () => {
           </NavLink>
         </li>
         <li className="li-sidebar">
+          <NavLink to="/admin/roles/listado" className="flex items-center w-full" activeClassName="active">
+            <IoLockClosedOutline className="icon" />
+            <span className="ml-4">Roles</span>
+          </NavLink>
+        </li>
+        <li className="li-sidebar">
+          <NavLink to="/admin/rolxpermiso/listado" className="flex items-center w-full" activeClassName="active">
+            <IoLockClosedOutline className="icon" />
+            <span className="ml-4">Roles y permisos</span>
+          </NavLink>
+        </li>
+        <li className="li-sidebar">
           <NavLink to="/admin/configuracion" className="flex items-center w-full" activeClassName="active">
             <IoSettingsOutline className="icon" />
             <span className="ml-4">Configuración</span>

@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Figtree-Bold';
+    src: url('scr/Fonts/Figtree-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('scr/Fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Light';
+    src: url('scr/Fonts/Figtree-Light.ttf') format('truetype');
+}
+
 .contenido-pestana-item {
 	display: none;
 }
@@ -19,12 +34,14 @@
 
 .contenedor-izquierdo h1 {
 	margin: 0;
-	font-size: 3rem;
+	font-size: 3.5rem;
+	font-family: 'Figtree-Bold', sans-serif;
 }
 
 .contenedor-izquierdo h2 {
 	margin-top: 15px;
 	font-size: 2.5rem;
+	font-family: 'Figtree-Medium', sans-serif;
 }
 
 .contenedor-derecho {
@@ -77,6 +94,7 @@
 .pestanas p {
 	font-size: 1.2rem;
 	padding-top: 0.5rem;
+	font-family: 'Figtree-Light', sans-serif;
 }
 
 .pestanas .contenedor-pes>div:hover {
@@ -130,6 +148,7 @@
 .texto-pes {
 	font-size: 1.8rem;
 	margin-bottom: 1rem;
+	font-family: 'Figtree-Light', sans-serif;
 }
 
 @media (max-width: 768px) {

@@ -7,7 +7,9 @@ import AdminSidebar from '../admin/AdminSidebar';
 import AdminNav from '../admin/AdminNav';
 import ListadoUsuarioComponent from '../components/ListadoUsuarioComponent/ListadoUsuarioComponent';
 import EditUsuarioComponent from '../components/EditUsuarioComponent/EditUsuarioComponent';
-
+import PermisoComponent from '../components/PermisoComponent/PermisoComponent';
+import RolComponent from '../components/RolComponent/RolComponent';
+import RolXPermisoComponent from '../components/RolXPermisoComponent/RolXPermisoComponent'
 
 //import ProtectedRoute from '../ProtectedRoute';
 
@@ -22,7 +24,9 @@ const AdminTemplate = () => {
           <Routes>
           <Route path="usuarios/listado" element={<ListadoUsuarioComponent/>} />
           <Route path="usuarios/editar/:id" element={<EditUsuarioComponent/>} />
-          
+          <Route path="permisos/listado" element={<PermisoComponent/>} />
+          <Route path="roles/listado" element={<RolComponent/>} />
+          <Route path="rolxpermiso/listado" element={<RolXPermisoComponent/>} />
           </Routes>
         </div>
       </div>

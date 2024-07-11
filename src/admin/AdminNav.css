@@ -15,7 +15,6 @@
     top: 0;
     left: 16rem; /* Ajusta según el ancho de tu sidebar */
     z-index: 1000; /* Asegura que esté por encima del contenido */
-    box-shadow: 0 2px 4px -2px black; /* Sombra negra debajo */
 }
 
 .admin-nav .input {
@@ -71,7 +70,6 @@
     height: 2rem; /* Tamaño de la foto de perfil */
     border-radius: 50%;
     margin-right: 0.5rem;
-    border: 2px solid var(--blanco); /* Borde blanco */
 }
 
 .admin-nav .user-info span {
