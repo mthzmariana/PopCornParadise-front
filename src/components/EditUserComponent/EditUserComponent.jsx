@@ -5,7 +5,7 @@ import { UserContext } from '../../contexts/UserContext';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const EditUserComponent = () => {
-  const { id } = useParams(); // Obtener el ID del usuario de los parámetros de la URL
+  const { id } = useParams();
   const { user: usuario, setUser } = useContext(UserContext);
   const [userState, setUserState] = useState(usuario.user);
   const [email, setEmail] = useState(usuario.email);
@@ -20,8 +20,7 @@ const EditUserComponent = () => {
       setPassword(usuario.password);
       setEdad(usuario.edad);
 
-      if (id) { // Verificar si el ID está definido antes de hacer la solicitud
-        // Fetch user details including password
+      if (id) { 
         fetch(`http://localhost:4000/users/${id}`)
           .then(response => {
             if (response.ok) {
@@ -67,8 +66,8 @@ const EditUserComponent = () => {
       if (response.ok) {
         const data = await response.json();
         console.log("Respuesta:", data);
-        setUser(data); // Update the user context with the new data
-        navigate('/perfil'); // Redirigir al perfil después de la actualización
+        setUser(data); 
+        navigate('/perfil'); 
       } else {
         throw new Error("Error en la solicitud.");
       }
@@ -82,10 +81,10 @@ const EditUserComponent = () => {
   }
 
   return (
-    <div className="edit-user-page">
-      <div className="formU">
+    <div className="edit-page-use">
+      <div className="formL-use">
         <form onSubmit={editarUsuario}>
-          <div className="img-sm">
+          <div className="img-sm-use">
             <img src={LogoSinFondo} alt="LogoL" />
           </div>
           <div>
