@@ -22,6 +22,7 @@ function NavbarComponent() {
           <a href="/peliculas">Películas</a>
           <a href="/acerca-de">Acerca de</a>
           <a href="/contacto">Contacto</a>
+          <a href="/perfil">Perfil</a>
         </div>
         <div className="nav-links">
           {user ? (
