@@ -49,20 +49,30 @@ tr:hover td {
   color: black;
 }
 
-.edit-button,
-.delete-button {
-  background-color: #28a745;
-  /* Color de botones */
-  color: #ffffff;
+.edit-button {
+  padding: 5px 10px 5px 10px;
+  background-color: #f7931e;
+  color: white;
   border: none;
-  padding: 5px 10px;
-  border-radius: 12px;
+  border-radius: 15px;
   cursor: pointer;
-  margin-right: 5px;
+  transition: all .3s ease;
 }
 
 .delete-button {
-  background-color: #dc3545;
+  padding: 5px 10px 5px 10px;
+  background-color: #ffffff;
+  color: black;
+  border: solid #f7931e 1.5px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: scale(1.125);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
 }
 
 .table-wrapper {

@@ -1,64 +1,121 @@
-.rolxpermiso-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+.rolx-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #f7931e;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.rolx-container h1{
+    text-align: center;
+    margin: 15px;
+    font-size: 1.5rem;
 }
 
-.rolxpermiso-form {
+.rolx-form {
     display: flex;
-    gap: 10px;
-    align-items: center;
+    flex-direction: column;
 }
 
-.rolxpermiso-form select {
-    flex: 1;
+.rolx-form select {
+    outline: 0;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
 }
 
-.rolxpermiso-form button {
+.rolx-form button {
+    margin: 20px 120px 40px 120px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #f7931e;
-    color: white;
+    background-color: #ffffff;
+    color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
-.rolxpermiso-form button:hover {
-    background-color: #e58100;
+.rolx-form button:hover {
+    transform: scale(1.125);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
 }
 
-.rolxpermiso-list {
+.rolx-list {
     list-style-type: none;
     padding: 0;
 }
 
-.rolxpermiso-list li {
-    margin-bottom: 10px;
+.rolx-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 15px;
+    background-color: #ffffff;
+    font-size: 20px;
 }
 
-.rolxpermiso-list li button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    font-size: 14px;
+.rolx-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.elimi-rolx-bt{
+    padding: 5px 10px 5px 10px;
+    background-color: #ffffff;
+    color: black;
+    border: solid #f7931e 1.5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.elimi-rolx-bt:hover{
+    transform: scale(1.125);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+.modal-rolx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-rolx-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.confirm-rolx-button,
+.cancel-rolx-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.confirm-rolx-button {
     background-color: #f7931e;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.rolxpermiso-list li button:hover {
-    background-color: #e58100;
+.cancel-rolx-button {
+    background-color: #ffffff;
+    color: black;
+    border: solid #f7931e 1.5px;
 }
