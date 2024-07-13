@@ -1,36 +1,40 @@
 .edit-page-admin {
-  background-image: url('../../assets/FondoLogin.jpg');
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-wrap: wrap;
+  align-items: center; 
+  height: calc(100vh - 50px); 
+  margin-top: 50px;
 }
 
 .formL-admin {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
-  margin: 0 auto 50px; /* Ajustar el margen inferior aquí para bajar el formulario */
-  padding: 45px;
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto 80px;
+  padding: 50px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 60px;
+  border-radius: 50px;
+}
+
+.formL-admin h2 {
+  color: #b15b5b; /* Mismo color que el botón */
+  margin-bottom: 30px;
+  font-size: 24px;
 }
 
 .formL-admin input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
-  width: 100%;
+  width: 90%;
   border: 2px solid #b15b5b;
   margin: 0 0 15px;
-  padding: 15px;
+  padding: 15px; /* Aumentar el padding de los inputs */
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 18px; /* Aumentar el tamaño de fuente */
   color: black;
   border-radius: 60px;
 }
@@ -42,42 +46,27 @@
   background: #b15b5b;
   width: 100%;
   border: 0;
-  padding: 15px;
+  padding: 20px; /* Aumentar el padding del botón */
   color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  font-size: 18px; /* Aumentar el tamaño de fuente */
+  transition: all 0.3s ease;
   cursor: pointer;
   border-radius: 60px;
 }
 
-.formL-admin button:hover,
-.form-admin button:active,
-.form-admin button:focus {
+.formL-admin button:hover {
   background: #dd8383;
 }
 
 .formL-admin .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 12px;
+  font-size: 14px; 
 }
 
 .formL-admin .message a {
   color: #af4c4c;
   text-decoration: none;
-}
-
-.formL-admin .img-sm-admin {
-  text-align: center;
-  width: 100%;
-}
-
-.formL-admin .img-sm-admin img {
-  width: 400px;
-  height: auto;
-  display: block;
-  margin: -50px -20px 0;
 }
 
 body {

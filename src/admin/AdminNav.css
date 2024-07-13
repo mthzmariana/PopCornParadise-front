@@ -8,22 +8,22 @@
     background-color: var(--naranja);
     padding: 1rem;
     display: flex;
-    justify-content: space-between; /* Distribuir espacio entre los elementos */
+    justify-content: space-between; 
     align-items: center;
-    width: calc(100% - 16rem); /* Ajusta según el ancho de tu sidebar */
+    width: calc(100% - 16rem); 
     position: fixed;
     top: 0;
-    left: 16rem; /* Ajusta según el ancho de tu sidebar */
-    z-index: 1000; /* Asegura que esté por encima del contenido */
+    left: 16rem; 
+    z-index: 1000; 
 }
 
 .admin-nav .input {
-    padding-right: 2rem; /* Asegura espacio para el icono */
+    padding-right: 2rem; 
 }
 
 .admin-nav .icon {
-    width: 1rem; /* Tamaño del icono */
-    height: 1rem; /* Tamaño del icono */
+    width: 1rem; 
+    height: 1rem; 
     line-height: 1rem;
     position: absolute;
     color: var(--naranja);
@@ -35,10 +35,10 @@
 .admin-nav a {
     display: flex;
     align-items: center;
-    position: relative; /* Necesario para ajustar el subrayado */
-    padding-bottom: 5px; /* Espaciado inferior para el subrayado */
-    color: var(--blanco); /* Color de texto blanco */
-    text-decoration: none; /* Quitar subrayado predeterminado */
+    position: relative; 
+    padding-bottom: 5px;
+    color: var(--blanco); 
+    text-decoration: none; 
 }
 
 .admin-nav a i {
@@ -51,24 +51,25 @@
 }
 
 .admin-nav .search-admin { 
-    padding: 0.5rem; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde del input */
-    border-radius: 4px; /* Bordes redondeados */
-    background-color: #fff; /* Fondo blanco */
-    width: 200px; /* Ancho del input */
+    padding: 0.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #fff; 
+    width: 200px; 
 }
 
 .admin-nav .user-info {
     display: flex;
     align-items: center;
     position: absolute;
-    right: 4rem; /* Ajusta la distancia desde el borde derecho */
+    right: 4rem; 
 }
 
 .admin-nav .user-info img {
-    width: 2rem; /* Tamaño de la foto de perfil */
-    height: 2rem; /* Tamaño de la foto de perfil */
+    width: 2rem; 
+    height: 2rem; 
     border-radius: 50%;
+    border: 2px solid var(--blanco); 
     margin-right: 0.5rem;
 }
 
