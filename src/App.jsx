@@ -13,6 +13,7 @@ import EditUserComponent from "./components/EditUserComponent/EditUserComponent"
 import FooterComponent from "./components/FooterComponent/FooterComponent";
 import { UserProvider } from './contexts/UserContext'; 
 import AdminTemplate from './templates/AdminTemplate';
+import TicketPageComponent from './components/TicketPageComponent/TicketPageComponent';  // <--- Importa TicketPageComponent
 
 function App() {
   const [footerFlag, setFooterFlag] = useState(true);
@@ -22,7 +23,7 @@ function App() {
     <UserProvider>
       <Router>
         <Routes>
-        <Route path="/admin/*" element={<AdminTemplate/>} />
+          <Route path="/admin/*" element={<AdminTemplate/>} />
           <Route
             path="*"
             element={
@@ -38,6 +39,7 @@ function App() {
                     <Route path="/peliculas" element={<PeliculasComponent />} />
                     <Route path="/perfil" element={<PerfilComponent />} />
                     <Route path="/editar-perfil/:id" element={<EditUserComponent />} />
+                    <Route path="/ticket" element={<TicketPageComponent />} /> {/* <--- Añade esta línea */}
                   </Routes>
                 </div>
                 {footerFlag && <FooterComponent />}

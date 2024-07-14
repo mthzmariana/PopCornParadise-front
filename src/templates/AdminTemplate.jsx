@@ -8,8 +8,10 @@ import EditUsuarioComponent from '../components/EditUsuarioComponent/EditUsuario
 import PermisoComponent from '../components/PermisoComponent/PermisoComponent';
 import RolComponent from '../components/RolComponent/RolComponent';
 import RolXPermisoComponent from '../components/RolXPermisoComponent/RolXPermisoComponent'
-import HomeComponent from '../components/HomeComponent/HomeComponent'
-
+import RegistroUserComponent from '../components/RegistroComponent/RegistroComponent';
+import ListadoProductosComponent from '../components/ListadoProductosComponent/ListadoProductosComponent';
+import RegistroProductoComponent from '../components/RegistroProductoComponent/RegistroProductoComponent';
+import EditarProductoComponent from '../components/EditarProductoComponent/EditarProductoComponent';
 //import ProtectedRoute from '../ProtectedRoute';
 
 
@@ -30,7 +32,6 @@ const AdminTemplate = () => {
           <Route path="productos/listado" element={<ListadoProductosComponent/>} />
           <Route path="movies/agregar" element={<RegistroProductoComponent/>} />
           <Route path="movies/editar/:id" element={<EditarProductoComponent/>} />
-        
           </Routes>
         </div>
       </div>

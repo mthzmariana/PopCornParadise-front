@@ -19,10 +19,11 @@ function NavbarComponent() {
           </a>
         </button>
         <div className="nav-links">
-          <a href="/peliculas">Películas</a>
+        <a href="/">Inicio</a>
           <a href="/acerca-de">Acerca de</a>
-          <a href="/contacto">Contacto</a>
-          <a href="/perfil">Perfil</a>
+          <a href="/contacto">Soporte</a>
+          <a href="/peliculas">Películas y Series</a>
+          <a href="/perfil">Mi Perfil</a>
         </div>
         <div className="nav-links">
           {user ? (

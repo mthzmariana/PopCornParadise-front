@@ -1,6 +1,7 @@
 import Carrito from "../Carrito";
 import "./PeliculasComponent.css";
 
+
 function PeliculasComponent() {
 
   return (
