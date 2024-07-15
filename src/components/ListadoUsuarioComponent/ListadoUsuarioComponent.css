@@ -1,3 +1,5 @@
+/* ListadoUsuarioComponent.css */
+
 .App {
   text-align: center;
 }
@@ -5,20 +7,20 @@
 .title {
   color: black;
   font-size: 35px;
-  margin-top: 80px;
-  text-align: center;
+  margin-top: 90px;
+  position: relative;
+  left: 350px;
 }
 
 .button-container {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: center; 
+  margin-bottom: 20px; 
 }
 
 .table-container {
-  width: 85%;
-  margin: 0 auto;
+  width: 85%; 
   text-align: center;
-  max-width: 1000px;
+  max-width: 1000px; 
 }
 
 table {
@@ -26,7 +28,8 @@ table {
   text-align: center;
   border-collapse: collapse;
   width: 100%;
-  /* border: 1px solid #ccc; */
+  border: 1px solid #ccc; 
+  margin-top: -30px;
 }
 
 th,
@@ -35,8 +38,8 @@ td {
 }
 
 thead {
-  background-color: #ffb432;
-  /* border-bottom: 5px solid #f77f00; */
+  background-color: #ffb432; 
+  border-bottom: 5px solid #f77f00; 
   color: white;
 }
 
@@ -45,38 +48,27 @@ tr:nth-child(even) {
 }
 
 tr:hover td {
-  background-color: #fffaec;
+  background-color: #fffaec; 
   color: black;
 }
 
-.edit-button {
-  padding: 5px 10px 5px 10px;
-  background-color: #f7931e;
-  color: white;
+.edit-button,
+.delete-button {
+  background-color: #28a745; 
+  color: #fff;
   border: none;
-  border-radius: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
   cursor: pointer;
   transition: all .3s ease;
 }
 
 .delete-button {
-  padding: 5px 10px 5px 10px;
-  background-color: #ffffff;
-  color: black;
-  border: solid #f7931e 1.5px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-.edit-button:hover,
-.delete-button:hover {
-  transform: scale(1.125);
-  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  background-color: #dc3545; 
 }
 
 .table-wrapper {
-  margin-top: 50px;
+  margin-top: 50px; 
   text-align: center;
 }
 
@@ -97,6 +89,7 @@ tr:hover td {
 .modal-content {
   background-color: #fefefe;
   padding: 20px;
+  border: 1px solid #888;
   width: 300px;
   text-align: center;
   border-radius: 10px;
@@ -105,19 +98,35 @@ tr:hover td {
 .modal-content button {
   margin: 5px;
   padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .confirm-button {
-  background-color: #f77f00;
+  background-color: #f77f00; 
   color: white;
-  border: none;
-  border-radius: 15px;
 }
 
 .cancel-button {
-  background-color: #dc3545;
+  background-color: #dc3545; 
+  color: white;
+}
+
+.add-user-button-container {
+  text-align: right;
+  margin-bottom: 10px;
+  margin-right: 4%;
+}
+
+.add-user-button {
+  padding: 10px 20px;
+  background-color: #FFC107; 
   color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-user-button:hover {
+  background-color: #FFC107; 
 }

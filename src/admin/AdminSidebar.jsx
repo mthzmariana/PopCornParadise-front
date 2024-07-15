@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 import '../admin/AdminSidebar.css';
-import '/public/css/hover-min.css';
+
 import LogoSinFondo from '/src/assets/LogoSinFondo.png';
 
 import { IoPeopleOutline, IoBagHandleOutline, IoCartOutline, IoLockClosedOutline, IoSettingsOutline, IoLogOutOutline } from 'react-icons/io5';

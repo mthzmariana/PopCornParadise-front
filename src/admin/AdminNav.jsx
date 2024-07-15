@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import './AdminNav.css'; // Ajusta la ruta según la estructura de tu proyecto
-import '/public/css/hover-min.css';
+import './AdminNav.css'; 
+
 import { UserContext } from '../contexts/UserContext';
 import PerfilFoto1 from '/src/assets/PerfilFoto1.png';
 

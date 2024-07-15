@@ -7,13 +7,34 @@ const ContactoComponent = () => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [comentarios, setComentarios] = useState("");
+  const [mensaje, setMensaje] = useState(null); // Estado para mostrar mensajes al usuario
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Manejar el envío del formulario aquí
-    console.log("Nombre:", nombre);
-    console.log("Email:", email);
-    console.log("Comentarios:", comentarios);
+
+    try {
+      // Realizar la solicitud POST al servidor
+      const response = await fetch("http://localhost:4000/contacto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ nombre, email, comentarios }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al enviar el mensaje");
+      }
+
+      // Limpiar el formulario y mostrar mensaje de éxito
+      setNombre("");
+      setEmail("");
+      setComentarios("");
+      setMensaje("Mensaje enviado correctamente");
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      setMensaje("Error al enviar el mensaje");
+    }
   };
 
   return (
@@ -71,6 +92,7 @@ const ContactoComponent = () => {
               <button className="button-env" type="submit">
                 Enviar
               </button>
+              {mensaje && <p>{mensaje}</p>}
             </form>
           </div>
         </div>

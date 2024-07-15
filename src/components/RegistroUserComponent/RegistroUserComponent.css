@@ -1,0 +1,78 @@
+.login-page-agregar {
+  margin-top: 90px;
+}
+
+.formR-agregar {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 360px; 
+  max-width: 600px; 
+  margin: 0 auto 100px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 60px;
+}
+
+.formR-agregar input,
+.formR-agregar select {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 2px solid #b15b5b;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.formR-agregar button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #b15b5b;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 60px;
+}
+
+.formR-agregar button:hover,
+.formR-agregar button:active,
+.formR-agregar button:focus {
+  background: #dd8383;
+}
+
+.formR-agregar .img-sm {
+  text-align: center;
+  width: 100%;
+}
+
+.formR-agregar h2 {
+  color: #b15b5b;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.message {
+  margin-top: 20px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.message a {
+  color: #af4c4c;
+  text-decoration: none;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+}

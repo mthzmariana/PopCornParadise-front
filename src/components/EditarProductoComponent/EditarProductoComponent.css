@@ -1,0 +1,114 @@
+/* EditarProductoComponent.css */
+
+.login-page-editproducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* Fondo del formulario */
+  margin: 100px;
+}
+
+.formR-editproducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ffa500;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff; /* Asegurar el fondo blanco */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formR-editproducto h2 {
+  color: #ffa500; /* Color naranja para el título */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-editproducto {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-column-editproducto {
+  width: 60%; /* Ancho para la columna izquierda */
+}
+
+.right-column-editproducto {
+  width: 350px; /* Ancho para la columna derecha */
+}
+
+.image-upload-editproducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload-editproducto img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  background-color: #fff8dc;
+  margin-bottom: 20px;
+}
+
+.form-container-editproducto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-container-editproducto form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-container-editproducto input,
+.form-container-editproducto textarea,
+.form-container-editproducto select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.buttons-editproducto {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px; /* Aumentar espacio hacia arriba */
+  width: 100%;
+}
+
+.button-regis-editproducto {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button-regis-editproducto.guardar {
+  background-color: #ffa500;
+  color: white;
+  margin-right: 10px; /* Espacio entre los botones */
+}
+
+.button-regis-editproducto.cancelar {
+  background-color: #ff6347;
+  color: white;
+}
+
+.message-editproducto {
+  text-align: center;
+  margin-top: 20px; /* Ajustar espacio superior */
+  width: 100%;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+}

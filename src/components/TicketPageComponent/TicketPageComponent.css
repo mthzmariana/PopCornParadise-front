@@ -1,0 +1,52 @@
+/* src/components/TicketPageComponent/TicketPageComponent.css */
+
+.ticket-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.ticket-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.ticket-container p {
+    font-size: 16px;
+    color: #555;
+}
+
+.ticket-products {
+    margin-top: 20px;
+}
+
+.ticket-product {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket-product span {
+    margin-right: 10px;
+}
+
+.ticket-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: right;
+}

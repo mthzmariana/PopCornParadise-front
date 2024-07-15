@@ -13,4 +13,9 @@
   .p-10 {
     padding: 1.25rem;
   }
-  
+  .admin-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+  }
