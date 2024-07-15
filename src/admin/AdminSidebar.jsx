@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 import '../admin/AdminSidebar.css';
-import '/public/css/hover-min.css';
+
 import LogoSinFondo from '/src/assets/LogoSinFondo.png';
 
 import { IoPeopleOutline, IoBagHandleOutline, IoCartOutline, IoLockClosedOutline, IoSettingsOutline, IoLogOutOutline } from 'react-icons/io5';
@@ -71,12 +71,7 @@ const AdminSidebar = () => {
             <span className="ml-4">Roles y permisos</span>
           </NavLink>
         </li>
-        <li className="li-sidebar">
-          <NavLink to="/admin/configuracion" className="flex items-center w-full" activeClassName="active">
-            <IoSettingsOutline className="icon" />
-            <span className="ml-4">Configuración</span>
-          </NavLink>
-        </li>
+  
         <li className="li-sidebar cerrar-sesion">
           <button className="flex items-center w-full" onClick={handleLogout}>
             <IoLogOutOutline className="icon" />

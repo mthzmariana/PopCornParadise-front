@@ -5,6 +5,7 @@ const PermisoComponent = () => {
   const [permisos, setPermisos] = useState([]);
   const [nompermiso, setNomPermiso] = useState('');
   const [clave, setClave] = useState('');
+  const [permisoAEliminar, setPermisoAEliminar] = useState(null); // Estado para manejar el permiso a eliminar
 
   // Función para obtener todos los permisos desde el backend
   const obtenerPermisos = async () => {
@@ -58,13 +59,14 @@ const PermisoComponent = () => {
   };
 
   // Función para eliminar un permiso
-  const eliminarPermiso = async (id) => {
+  const eliminarPermiso = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/permiso/${id}`, {
+      const response = await fetch(`http://localhost:4000/permiso/${permisoAEliminar}`, {
         method: 'DELETE',
       });
       console.log('Permiso eliminado con éxito');
       obtenerPermisos(); // Actualiza la lista de permisos después de eliminar uno
+      setPermisoAEliminar(null); // Resetear el estado del permiso a eliminar
     } catch (error) {
       console.error('Error al eliminar permiso:', error);
     }
@@ -77,7 +79,7 @@ const PermisoComponent = () => {
 
   return (
     <div className="permiso-container">
-      <h1>Permisos</h1>
+      <h1>Crear permiso</h1>
       <form className="permiso-form" onSubmit={(e) => {
         e.preventDefault();
         if (!nompermiso || !clave) {
@@ -119,20 +121,32 @@ const PermisoComponent = () => {
           onChange={(e) => setClave(e.target.value)}
           required
         />
-        <button type="submit">Guardar Permiso</button>
+        <button type="submit">Guardar permiso</button>
       </form>
+      <h1>Editar permisos</h1>
       <ul className="permiso-list">
         {permisos.map((permiso) => (
-          <li key={permiso._id}>
-            {permiso.nompermiso} - {permiso.clave}
-            <button onClick={() => eliminarPermiso(permiso._id)}>Eliminar</button>
-            <button onClick={() => {
-              setNomPermiso(permiso.nompermiso);
-              setClave(permiso.clave);
-            }}>Editar</button>
+          <li key={permiso._id} className="permiso-item">
+            <span>{permiso.nompermiso} - {permiso.clave}</span>
+            <div className="permiso-buttons">
+              <button className='edit-per-bt' onClick={() => {
+                setNomPermiso(permiso.nompermiso);
+                setClave(permiso.clave);
+              }}>Editar</button>
+              <button className='elimi-per-bt' onClick={() => setPermisoAEliminar(permiso._id)}>Eliminar</button>
+            </div>
           </li>
         ))}
       </ul>
+      {permisoAEliminar && (
+        <div className="modal-per">
+          <div className="modal-per-content">
+            <p>¿Estás seguro de que deseas eliminar este permiso?</p>
+            <button className="confirm-per-button" onClick={eliminarPermiso}>Confirmar</button>
+            <button className="cancel-per-button" onClick={() => setPermisoAEliminar(null)}>Cancelar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

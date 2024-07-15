@@ -5,6 +5,9 @@ export const data = [
 		nameProduct: 'Iron Man',
 		price: 50,
 		quantity: 1,
+		genero: "Accion",
+        clasificacion: "A",
+        descripcion: "Una película llena de acción y aventuras.",
 	},
 	{
 		id: 2,
@@ -12,6 +15,9 @@ export const data = [
 		nameProduct: 'Capitan America',
 		price: 50,
 		quantity: 1,
+		genero: "Comedia",
+        clasificacion: "AA",
+        descripcion: "Una comedia que te hará reír a carcajadas.",
 	},
 	{
 		id: 3,
@@ -19,6 +25,9 @@ export const data = [
 		nameProduct: 'Avengers',
 		price: 60,
 		quantity: 1,
+		genero: "Drama",
+        clasificacion: "B12",
+        descripcion: "Un drama que explora la profundidad de las emociones humanas.",
 	},
 	{
 		id: 4,
@@ -26,6 +35,9 @@ export const data = [
 		nameProduct: 'Doctor Strange',
 		price: 50,
 		quantity: 1,
+		genero: "Horror",
+        clasificacion: "C",
+        descripcion: "Una película de terror que te mantendrá despierto por la noche.",
 	},
 	{
 		id: 5,
@@ -33,6 +45,9 @@ export const data = [
 		nameProduct: 'Back to the Future',
 		price: 30,
 		quantity: 1,
+		genero: "Comedia",
+        clasificacion: "A",
+        descripcion: "Las flipantes aventuras de doctor ciencia y rockencio.",
 	},
 
 	{
@@ -41,6 +56,10 @@ export const data = [
 		nameProduct: 'The Boys',
 		price: 30,
 		quantity: 1,
+		genero: "Accion",
+        clasificacion: "D",
+        descripcion: "Una épica aventura a través de tierras desconocidas.",
 	},
+	
 	// Aquí pueden agregar más o modificar los productos existentes
 ];

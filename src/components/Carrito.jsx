@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Header } from '../components/Header';
 import { ProductList } from '../components/ProductList';
 
-const Carrito = () => {
+const Carrito = ({ Selecciongenero, Seleccionclasificacion }) => {
 	const [allProducts, setAllProducts] = useState([]);
 	const [total, setTotal] = useState(0);
 	const [countProducts, setCountProducts] = useState(0);
@@ -24,9 +24,12 @@ const Carrito = () => {
 				setTotal={setTotal}
 				countProducts={countProducts}
 				setCountProducts={setCountProducts}
+				Selecciongenero={Selecciongenero}
+				Seleccionclasificacion={Seleccionclasificacion}
 			/>
 		</>
 	);
 };
 
 export default Carrito;
+

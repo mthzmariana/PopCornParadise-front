@@ -1,122 +1,149 @@
-import React, { useState, useEffect } from 'react';
-import './RolXPermisoComponent.css';
+import React, { useState, useEffect } from "react";
+import "./RolXPermisoComponent.css";
 
 const RolXPermisoComponent = () => {
   const [rolxpermisos, setRolxPermisos] = useState([]);
-  const [idrol, setIdRol] = useState('');
-  const [idpermiso, setIdPermiso] = useState('');
+  const [roles, setRoles] = useState([]);
+  const [permisos, setPermisos] = useState([]);
+  const [idrol, setIdRol] = useState("");
+  const [idpermiso, setIdPermiso] = useState("");
+  const [rolxPermisoAEliminar, setRolxPermisoAEliminar] = useState(null);
 
-  // Función para obtener todos los roles por permiso desde el backend
+  // Obtener todos los roles por permiso
   const obtenerRolxPermisos = async () => {
     try {
-      const response = await fetch('http://localhost:4000/rolxpermiso'); // Ruta GET para obtener roles por permiso
+      const response = await fetch("http://localhost:4000/rolxpermiso");
       const data = await response.json();
       setRolxPermisos(data);
     } catch (error) {
-      console.error('Error al obtener roles por permiso:', error);
+      console.error("Error al obtener roles por permiso:", error);
     }
   };
 
-  // Función para crear un nuevo rol por permiso
+  // Obtener todos los roles
+  const obtenerRoles = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/roles");
+      const data = await response.json();
+      setRoles(data);
+    } catch (error) {
+      console.error("Error al obtener roles:", error);
+    }
+  };
+
+  // Obtener todos los permisos
+  const obtenerPermisos = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/permiso");
+      const data = await response.json();
+      setPermisos(data);
+    } catch (error) {
+      console.error("Error al obtener permisos:", error);
+    }
+  };
+
+  // Creación de nuevo rol x permiso
   const crearRolxPermiso = async () => {
     try {
-      const response = await fetch('http://localhost:4000/rolxpermiso', {
-        method: 'POST',
+      const response = await fetch("http://localhost:4000/rolxpermiso", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ idrol, idpermiso }),
       });
       const data = await response.json();
-      console.log('Rol por permiso creado:', data);
-      obtenerRolxPermisos(); // Actualiza la lista de roles por permiso después de crear uno nuevo
-      setIdRol('');
-      setIdPermiso('');
+      console.log("Rol por permiso creado:", data);
+      obtenerRolxPermisos();
+      setIdRol("");
+      setIdPermiso("");
     } catch (error) {
-      console.error('Error al crear rol por permiso:', error);
+      console.error("Error al crear rol por permiso:", error);
     }
   };
 
-  // Función para actualizar un rol por permiso existente
+  // Actualizar un rol x permiso existente
   const actualizarRolxPermiso = async (id) => {
     try {
       const response = await fetch(`http://localhost:4000/rolxpermiso/${id}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ idrol, idpermiso }),
       });
       const data = await response.json();
-      console.log('Rol por permiso actualizado:', data);
-      obtenerRolxPermisos(); // Actualiza la lista de roles por permiso después de actualizar uno
-      setIdRol('');
-      setIdPermiso('');
+      console.log("Rol por permiso actualizado:", data);
+      obtenerRolxPermisos();
+      setIdRol("");
+      setIdPermiso("");
     } catch (error) {
-      console.error('Error al actualizar rol por permiso:', error);
+      console.error("Error al actualizar rol por permiso:", error);
     }
   };
 
   // Función para eliminar un rol por permiso
-  const eliminarRolxPermiso = async (id) => {
+  const eliminarRolxPermiso = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/rolxpermiso/${id}`, {
-        method: 'DELETE',
-      });
-      console.log('Rol por permiso eliminado con éxito');
-      obtenerRolxPermisos(); // Actualiza la lista de roles por permiso después de eliminar uno
+      const response = await fetch(
+        `http://localhost:4000/rolxpermiso/${rolxPermisoAEliminar}`,
+        {
+          method: "DELETE",
+        }
+      );
+      console.log("Rol por permiso eliminado con éxito");
+      obtenerRolxPermisos();
+      setRolxPermisoAEliminar(null);
     } catch (error) {
-      console.error('Error al eliminar rol por permiso:', error);
+      console.error("Error al eliminar rol por permiso:", error);
     }
   };
 
-  // Efecto para cargar los roles por permiso cuando el componente se monta
   useEffect(() => {
     obtenerRolxPermisos();
+    obtenerRoles();
+    obtenerPermisos();
   }, []);
 
   return (
-    <div className="rolxpermiso-container">
+    <div className="rolx-container">
       <h1>Roles y permisos</h1>
-      <form className="rolxpermiso-form" onSubmit={(e) => {
-        e.preventDefault();
-        if (!idrol || !idpermiso) {
-          alert('Por favor selecciona un rol y un permiso');
-          return;
-        }
+      <form
+        className="rolx-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (!idrol || !idpermiso) {
+            alert("Por favor selecciona un rol y un permiso");
+            return;
+          }
 
-        // Determinar si se va a crear o actualizar el rol por permiso
-        const rolxPermisoExistente = rolxpermisos.find(item => item.idrol === idrol && item.idpermiso === idpermiso);
-        if (rolxPermisoExistente) {
-          alert('Ya existe un rol por permiso con esta combinación');
-          return;
-        }
+          // Creación o actualización de rol x permiso
+          const rolxPermisoExistente = rolxpermisos.find(
+            (item) => item.idrol === idrol && item.idpermiso === idpermiso
+          );
+          if (rolxPermisoExistente) {
+            alert("Ya existe un rol por permiso con esta combinación");
+            return;
+          }
 
-        const idrolValid = mongoose.Types.ObjectId.isValid(idrol);
-        const idpermisoValid = mongoose.Types.ObjectId.isValid(idpermiso);
-
-        if (!idrolValid || !idpermisoValid) {
-          alert('Los IDs de rol y permiso deben ser válidos');
-          return;
-        }
-
-        // Determinar si se va a crear o actualizar el rol por permiso
-        if (rolxPermisoExistente) {
-          actualizarRolxPermiso(rolxPermisoExistente._id);
-        } else {
-          crearRolxPermiso();
-        }
-      }}>
+          if (rolxPermisoExistente) {
+            actualizarRolxPermiso(rolxPermisoExistente._id);
+          } else {
+            crearRolxPermiso();
+          }
+        }}
+      >
         <select
           value={idrol}
           onChange={(e) => setIdRol(e.target.value)}
           required
         >
           <option value="">Selecciona un rol</option>
-          {/* Opciones de roles podrían ser obtenidas de otro endpoint */}
-          {/* Ejemplo de hardcoded options */}
-          <option value="6655fffe03c0d12c9dff1f3f">Administrador</option>
-          <option value="665600b703c0d12c9dff1f40">Cliente</option>
+          {roles.map((rol) => (
+            <option key={rol._id} value={rol._id}>
+              {rol.nomrol}
+            </option>
+          ))}
         </select>
         <select
           value={idpermiso}
@@ -124,21 +151,50 @@ const RolXPermisoComponent = () => {
           required
         >
           <option value="">Selecciona un permiso</option>
-          {/* Opciones de permisos podrían ser obtenidas de otro endpoint */}
-          {/* Ejemplo de hardcoded options */}
-          <option value="6656018c03c0d12c9dff1f42">Administrar</option>
-          <option value="665601c203c0d12c9dff1f43">Usuario</option>
+          {permisos.map((permiso) => (
+            <option key={permiso._id} value={permiso._id}>
+              {permiso.nompermiso}
+            </option>
+          ))}
         </select>
-        <button type="submit">Guardar Rol x Permiso</button>
+        <button type="submit">Guardar</button>
       </form>
-      <ul className="rolxpermiso-list">
+      <ul className="rolx-list">
         {rolxpermisos.map((item) => (
-          <li key={item._id}>
-            Rol: {item.idrol} - Permiso: {item.idpermiso}
-            <button onClick={() => eliminarRolxPermiso(item._id)}>Eliminar</button>
+          <li key={item._id} className="rolx-item">
+            <span>
+              Rol: {roles.find((rol) => rol._id === item.idrol)?.nomrol || item.idrol} - Permiso: {permisos.find((permiso) => permiso._id === item.idpermiso)?.nompermiso || item.idpermiso}
+            </span>
+            <div className="rolx-buttons">
+              <button
+                className="elimi-rolx-bt"
+                onClick={() => setRolxPermisoAEliminar(item._id)}
+              >
+                Eliminar
+              </button>
+            </div>
           </li>
         ))}
       </ul>
+      {rolxPermisoAEliminar && (
+        <div className="modal-rolx">
+          <div className="modal-rolx-content">
+            <p>¿Estás seguro de que deseas eliminar este rol por permiso?</p>
+            <button
+              className="confirm-rolx-button"
+              onClick={eliminarRolxPermiso}
+            >
+              Confirmar
+            </button>
+            <button
+              className="cancel-rolx-button"
+              onClick={() => setRolxPermisoAEliminar(null)}
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

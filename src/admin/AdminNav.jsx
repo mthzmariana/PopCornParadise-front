@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './AdminNav.css'; 
-import '/public/css/hover-min.css';
+
 import { UserContext } from '../contexts/UserContext';
 import PerfilFoto1 from '/src/assets/PerfilFoto1.png';
 

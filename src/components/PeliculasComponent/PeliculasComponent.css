@@ -17,7 +17,7 @@
 .icon-cart {
 	width: 60px;
 	height: 40px;
-	stroke: #000;
+	stroke: #000000;
 }
 
 .icon-cart:hover {
@@ -44,7 +44,7 @@ header {
 	top: 55%;
 	right: 3px;
 
-	background-color: #bc2b2b;
+	background-color: #f72100d8;
 	color: #fff;
 	width: 25px;
 	height: 25px;
@@ -179,13 +179,23 @@ header {
 }
 
 .info-product button {
-	border: none;
-	background: none;
-	background-color: #000;
-	color: #fff;
-	padding: 15px 10px;
-	cursor: pointer;
+    border: none;
+    background: none;
+    background-color: #F77F00;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 8px; /* Ajusta el valor según lo suave que quieras el borde */
+    transition: all .3s ease;
 }
+
+.info-product button:hover {
+    transform: scale(1.125);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+
+
 
 .cart-empty {
 	padding: 20px;
@@ -198,7 +208,7 @@ header {
 
 .btn-clear-all {
 	border: none;
-	background-color: #000;
+	background-color: #212529;
 	color: #fff;
 	padding: 15px 0;
 	display: block;
@@ -213,7 +223,90 @@ header {
 }
 
 .btn-clear-all:hover {
-	background-color: #333;
+	background-color: #212529;
 	transform: scale(1.03);
 	border-radius: 0;
 }
+
+
+/* PeliculasComponent.css */
+
+.container-movie {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	
+  }
+  
+  .sidebar-movie {
+    background-color: black;
+    color: white;
+    width: 250px;
+    padding: 20px;
+  }
+  
+  .sidebar-movie h2,
+  .sidebar-movie h3 {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+  }
+  
+  .filter-group {
+    margin-bottom: 20px;
+  }
+  
+  .filter-group label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .main-content-movie {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .movie-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .movie-card {
+    position: relative;
+    width: calc(20% - 10px); /* Mostrar 5 películas por fila */
+    margin-bottom: 20px;
+  }
+  
+  .movie-image {
+    width: 100%;
+    display: block;
+	
+    transition: opacity 0.3s ease;
+  }
+  
+  .movie-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .movie-card:hover .movie-info {
+    opacity: 1;
+  }
+  
+  .movie-card:hover .movie-image {
+    opacity: 0.5;
+  }
+
+  .genero-movie {
+    font-weight: bold; /* Negritas */
+    font-style: italic; /* Cursiva */
+}
+
+  

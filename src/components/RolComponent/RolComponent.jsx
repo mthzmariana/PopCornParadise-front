@@ -4,6 +4,7 @@ import './RolComponent.css';
 const RolComponent = () => {
   const [roles, setRoles] = useState([]);
   const [nomrol, setNomRol] = useState('');
+  const [rolAEliminar, setRolAEliminar] = useState(null); // Estado para manejar el rol a eliminar
 
   // Función para obtener todos los roles desde el backend
   const obtenerRoles = async () => {
@@ -55,13 +56,14 @@ const RolComponent = () => {
   };
 
   // Función para eliminar un rol
-  const eliminarRol = async (id) => {
+  const eliminarRol = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/roles/${id}`, {
+      const response = await fetch(`http://localhost:4000/roles/${rolAEliminar}`, {
         method: 'DELETE',
       });
       console.log('Rol eliminado con éxito');
       obtenerRoles(); // Actualiza la lista de roles después de eliminar uno
+      setRolAEliminar(null); // Resetear el estado del rol a eliminar
     } catch (error) {
       console.error('Error al eliminar rol:', error);
     }
@@ -74,7 +76,7 @@ const RolComponent = () => {
 
   return (
     <div className="rol-container">
-      <h1>Roles</h1>
+      <h1>Crear rol</h1>
       <form className="rol-form" onSubmit={(e) => {
         e.preventDefault();
         if (!nomrol) {
@@ -105,17 +107,28 @@ const RolComponent = () => {
           onChange={(e) => setNomRol(e.target.value)}
           required
         />
-        <button type="submit">Guardar Rol</button>
+        <button type="submit">Guardar rol</button>
       </form>
       <ul className="rol-list">
         {roles.map((rol) => (
-          <li key={rol._id}>
-            {rol.nomrol}
-            <button onClick={() => eliminarRol(rol._id)}>Eliminar</button>
-            <button onClick={() => setNomRol(rol.nomrol)}>Editar</button>
+          <li key={rol._id} className='rol-item'>
+            <span>{rol.nomrol}</span>
+            <div className='rol-buttons'>
+              <button className='edit-rol-bt' onClick={() => setRolAEliminar(rol._id)}>Eliminar</button>
+              <button className='elimi-rol-bt'onClick={() => setNomRol(rol.nomrol)}>Editar</button>
+            </div>
           </li>
         ))}
       </ul>
+      {rolAEliminar && (
+        <div className="modal-rol">
+          <div className="modal-rol-content">
+            <p>¿Estás seguro de que deseas eliminar este rol?</p>
+            <button className="confirm-rol-button" onClick={eliminarRol}>Confirmar</button>
+            <button className="cancel-rol-button" onClick={() => setRolAEliminar(null)}>Cancelar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
