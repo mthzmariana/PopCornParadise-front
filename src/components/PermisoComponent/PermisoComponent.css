@@ -1,37 +1,47 @@
 .permiso-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #f7931e;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.permiso-container h1 {
+    text-align: center;
+    margin: 15px;
+    font-size: 1.5rem;
 }
 
 .permiso-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .permiso-form input[type="text"] {
+    outline: 0;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
 }
 
 .permiso-form button {
+    margin: 20px 120px 40px 120px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #f7931e;
-    color: white;
+    background-color: #ffffff;
+    color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
 .permiso-form button:hover {
-    background-color: #e58100;
+    transform: scale(1.125);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
 }
 
 .permiso-list {
@@ -39,25 +49,86 @@
     padding: 0;
 }
 
-.permiso-list li {
-    margin-bottom: 10px;
+.permiso-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 15px;
+    background-color: #ffffff;
+    font-size: 20px;
 }
 
-.permiso-list li button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    font-size: 14px;
+.permiso-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-per-bt {
+    padding: 5px 10px 5px 10px;
     background-color: #f7931e;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
-.permiso-list li button:hover {
-    background-color: #e58100;
+.elimi-per-bt {
+    padding: 5px 10px 5px 10px;
+    background-color: #ffffff;
+    color: black;
+    border: solid #f7931e 1.5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.edit-per-bt:hover,
+.elimi-per-bt:hover {
+    transform: scale(1.125);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+.modal-per {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.modal-per-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.confirm-per-button,
+.cancel-per-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.confirm-per-button {
+    background-color: #f7931e;
+    color: white;
+}
+
+.cancel-per-button {
+    background-color: #ffffff;
+    color: black;
+    border: solid #f7931e 1.5px;
 }
