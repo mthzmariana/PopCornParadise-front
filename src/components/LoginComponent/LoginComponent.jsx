@@ -44,7 +44,13 @@ function LoginComponent({ handleNavbar, handleFooter }) {
         alert('Inicio de sesión exitoso');
         localStorage.setItem('remember_token', data.rememberToken);
         setUser(data.user); // Establece el usuario en el contexto
-        navigate('/perfil'); // Navega a la ruta del perfil
+        if (data.user.idrol === '6655fffe03c0d12c9dff1f3f') {
+          navigate('/admin'); // Navega a la ruta de administrador
+        } else if (data.user.idrol === '665600b703c0d12c9dff1f40') {
+          navigate('/perfil'); // Navega a la ruta del perfil
+        } else {
+          console.error('Rol de usuario no reconocido');
+        }
       })
       .catch(error => {
         console.error('Error:', error);
@@ -56,12 +62,11 @@ function LoginComponent({ handleNavbar, handleFooter }) {
     <div className="login-page">
       <div className="formL">
         <form onSubmit={handleLogin}>
-        <div className="img-sm">
+          <div className="img-sm">
             <a href="/">
               <img src={LogoSinFondo} alt="LogoL" />
             </a>
           </div>
-          
           <div>
             <input
               className="input-box"

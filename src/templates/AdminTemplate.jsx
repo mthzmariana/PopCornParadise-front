@@ -8,7 +8,7 @@ import EditUsuarioComponent from '../components/EditUsuarioComponent/EditUsuario
 import PermisoComponent from '../components/PermisoComponent/PermisoComponent';
 import RolComponent from '../components/RolComponent/RolComponent';
 import RolXPermisoComponent from '../components/RolXPermisoComponent/RolXPermisoComponent'
-import RegistroUserComponent from '../components/RegistroComponent/RegistroComponent';
+import RegistroUserComponent from '../components/RegistroUserComponent/RegistroUserComponent';
 import ListadoProductosComponent from '../components/ListadoProductosComponent/ListadoProductosComponent';
 import RegistroProductoComponent from '../components/RegistroProductoComponent/RegistroProductoComponent';
 import EditarProductoComponent from '../components/EditarProductoComponent/EditarProductoComponent';

@@ -71,12 +71,7 @@ const AdminSidebar = () => {
             <span className="ml-4">Roles y permisos</span>
           </NavLink>
         </li>
-        <li className="li-sidebar">
-          <NavLink to="/admin/configuracion" className="flex items-center w-full" activeClassName="active">
-            <IoSettingsOutline className="icon" />
-            <span className="ml-4">Configuración</span>
-          </NavLink>
-        </li>
+  
         <li className="li-sidebar cerrar-sesion">
           <button className="flex items-center w-full" onClick={handleLogout}>
             <IoLogOutOutline className="icon" />
