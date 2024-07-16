@@ -12,7 +12,7 @@ import RegistroUserComponent from '../components/RegistroUserComponent/RegistroU
 import ListadoProductosComponent from '../components/ListadoProductosComponent/ListadoProductosComponent';
 import RegistroProductoComponent from '../components/RegistroProductoComponent/RegistroProductoComponent';
 import EditarProductoComponent from '../components/EditarProductoComponent/EditarProductoComponent';
-//import ProtectedRoute from '../ProtectedRoute';
+import ListadoComprasComponent from '../components/ListadoComprasComponent/ListadoComprasComponent';
 
 
 const AdminTemplate = () => {
@@ -32,6 +32,8 @@ const AdminTemplate = () => {
           <Route path="productos/listado" element={<ListadoProductosComponent/>} />
           <Route path="movies/agregar" element={<RegistroProductoComponent/>} />
           <Route path="movies/editar/:id" element={<EditarProductoComponent/>} />
+          <Route path="compras/listado" element={<ListadoComprasComponent/>} />
+        
           </Routes>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 import '../admin/AdminSidebar.css';
 
@@ -10,7 +10,8 @@ import axios from 'axios';
 
 const AdminSidebar = () => {
   const { user, setUser } = useContext(UserContext);
-  
+  const navigate = useNavigate(); // Hook de react-router-dom para redirigir
+
   const handleLogout = async () => {
     try {
       const response = await axios.post('http://localhost:4000/logout', {
@@ -21,6 +22,7 @@ const AdminSidebar = () => {
         if (confirmLogout) {
           setUser(null); 
           alert('Sesión cerrada exitosamente');
+          navigate('/login'); // Redirigir a la página de login
         }
       }
     } catch (error) {
