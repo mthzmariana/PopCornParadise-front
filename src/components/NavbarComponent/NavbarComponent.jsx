@@ -60,8 +60,9 @@ function NavbarComponent() {
               <span onClick={toggleDropdown} className="profile-name">{user.user}</span>
               {dropdownVisible && (
                 <div className="dropdown-menu">
-                  <a onClick={handleProfileClick}>Mi Perfil</a>
-                  <span onClick={handleLogout}>Cerrar sesión</span>
+                  <a onClick={handleProfileClick}>Mi perfil</a>
+                  {/* <span onClick={handleLogout}>Cerrar sesión</span> */}
+                  <a onClick={handleLogout}>Cerrar sesión</a>
                 </div>
               )}
             </div>

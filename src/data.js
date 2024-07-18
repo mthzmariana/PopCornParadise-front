@@ -16,7 +16,7 @@ export const data = [
 		price: 50,
 		quantity: 1,
 		genero: "Comedia",
-        clasificacion: "AA",
+        clasificacion: "A",
         descripcion: "Una comedia que te hará reír a carcajadas.",
 	},
 	{
@@ -57,7 +57,7 @@ export const data = [
 		price: 30,
 		quantity: 1,
 		genero: "Accion",
-        clasificacion: "D",
+        clasificacion: "C",
         descripcion: "Una épica aventura a través de tierras desconocidas.",
 	},
 	

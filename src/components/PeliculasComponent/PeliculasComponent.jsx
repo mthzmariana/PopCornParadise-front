@@ -56,10 +56,10 @@ function PeliculasComponent() {
 						<input type="checkbox" value="A" onChange={handleClasificacionChange} />
 						A
 					</label>
-					<label>
+					{/* <label>
 						<input type="checkbox" value="AA" onChange={handleClasificacionChange} />
 						AA
-					</label>
+					</label> */}
 					<label>
 						<input type="checkbox" value="B12" onChange={handleClasificacionChange} />
 						B12
@@ -68,10 +68,10 @@ function PeliculasComponent() {
 						<input type="checkbox" value="C" onChange={handleClasificacionChange} />
 						C
 					</label>
-					<label>
+					{/* <label>
 						<input type="checkbox" value="D" onChange={handleClasificacionChange} />
 						D
-					</label>
+					</label> */}
 				</div>
 			</div>
 
