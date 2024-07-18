@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header } from '../components/Header';
 import { ProductList } from '../components/ProductList';
+import { UserContext } from '../contexts/UserContext'; 
 
 const Carrito = ({ Selecciongenero, Seleccionclasificacion }) => {
 	const [allProducts, setAllProducts] = useState([]);
@@ -32,4 +33,3 @@ const Carrito = ({ Selecciongenero, Seleccionclasificacion }) => {
 };
 
 export default Carrito;
-

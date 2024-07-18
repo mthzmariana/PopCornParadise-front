@@ -104,12 +104,33 @@
     font-size: 20px;
 }
 
+.modal-per input[type="text"] {
+    outline: 0;
+    padding: 8px;
+    margin: 10px 5px;
+    font-size: 20px;
+    border: solid #212529 1px;
+    border-radius: 15px;
+}
+
 .modal-per-content {
     background-color: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     text-align: center;
+}
+
+.per-form-mo {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .confirm-per-button,

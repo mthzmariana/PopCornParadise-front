@@ -90,6 +90,7 @@
     flex-direction: column;
     z-index: 1;
     border: 1px solid orange;
+    border-radius: 10px;
 }
 
 .dropdown-menu a {
@@ -102,4 +103,5 @@
 
 .dropdown-menu a:hover {
     background-color: #e67e22;
+    border-radius: 10px;
 }

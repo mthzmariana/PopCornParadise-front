@@ -1,4 +1,3 @@
-// src/components/Header/Header.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css'; // Importa tu archivo de estilos CSS

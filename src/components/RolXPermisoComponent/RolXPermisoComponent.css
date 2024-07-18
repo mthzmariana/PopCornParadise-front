@@ -64,6 +64,17 @@
     gap: 10px;
 }
 
+.edit-rolx-bt{
+    margin-left: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #f7931e;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
 .elimi-rolx-bt{
     padding: 5px 10px 5px 10px;
     background-color: #ffffff;
@@ -74,6 +85,7 @@
     transition: all .3s ease;
 }
 
+.edit-rolx-bt:hover,
 .elimi-rolx-bt:hover{
     transform: scale(1.125);
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
@@ -99,9 +111,25 @@
     text-align: center;
 }
 
+.rolx-form-mo {
+    display: flex;
+    flex-direction: column;
+}
+
+.rolx-form-mo select {
+    outline: 0;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: solid #252629 1px;
+    border-radius: 15px;
+}
+
 .confirm-rolx-button,
 .cancel-rolx-button {
-    margin: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 15px;
