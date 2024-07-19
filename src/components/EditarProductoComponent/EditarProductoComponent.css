@@ -1,11 +1,9 @@
-/* EditarProductoComponent.css */
-
 .login-page-editproducto {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: #fff; /* Fondo del formulario */
+  background-color: #fff; 
   margin: 100px;
 }
 
@@ -16,12 +14,12 @@
   border: 1px solid #ffa500;
   padding: 20px;
   border-radius: 10px;
-  background-color: #fff; /* Asegurar el fondo blanco */
+  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .formR-editproducto h2 {
-  color: #ffa500; /* Color naranja para el título */
+  color: #ffa500; 
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -33,11 +31,11 @@
 }
 
 .left-column-editproducto {
-  width: 60%; /* Ancho para la columna izquierda */
+  width: 60%; 
 }
 
 .right-column-editproducto {
-  width: 350px; /* Ancho para la columna derecha */
+  width: 350px; 
 }
 
 .image-upload-editproducto {
@@ -80,7 +78,7 @@
 .buttons-editproducto {
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px; /* Aumentar espacio hacia arriba */
+  margin-top: 20px; 
   width: 100%;
 }
 
@@ -94,7 +92,7 @@
 .button-regis-editproducto.guardar {
   background-color: #ffa500;
   color: white;
-  margin-right: 10px; /* Espacio entre los botones */
+  margin-right: 10px; 
 }
 
 .button-regis-editproducto.cancelar {
@@ -104,7 +102,7 @@
 
 .message-editproducto {
   text-align: center;
-  margin-top: 20px; /* Ajustar espacio superior */
+  margin-top: 20px; 
   width: 100%;
 }
 

@@ -4,10 +4,12 @@ import './PerfilComponent.css';
 import defaultProfilePhoto from '../../assets/PerfilFoto2.png';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const PerfilComponent = () => {
   const { user, setUser } = useContext(UserContext);
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
 
   console.log('Usuario en PerfilComponent:', user);
 
@@ -27,16 +29,21 @@ const PerfilComponent = () => {
   }, [user]);
 
   const handleLogout = async () => {
-    const confirmLogout = window.confirm('¿Estás seguro de cerrar sesión?');
-    if (confirmLogout) {
-      try {
-        const response = await axios.post('http://localhost:4000/logout', { rememberToken: localStorage.getItem('remember_token') });
-        console.log('Respuesta de logout:', response.data);
-        setUser(null); 
-        localStorage.removeItem('remember_token'); 
-      } catch (error) {
-        console.error('Error al cerrar sesión:', error);
+    try {
+      const response = await axios.post('http://localhost:4000/logout', {
+        remember_token: user.remember_token 
+      });
+      if (response.status === 200) {
+        const confirmLogout = window.confirm('¿Seguro quieres cerrar la sesión?');
+        if (confirmLogout) {
+          setUser(null); 
+          alert('Sesión cerrada exitosamente');
+          navigate('/login'); 
+        }
       }
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+      alert('Hubo un error al cerrar sesión');
     }
   };
 

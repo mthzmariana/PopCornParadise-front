@@ -3,10 +3,12 @@ import axios from 'axios';
 import "./NavbarComponent.css";
 import MiniLogo from "../../icons/minilogo.jsx";
 import { UserContext } from '../../contexts/UserContext';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function NavbarComponent() {
   const { user, setUser } = useContext(UserContext);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.log('Usuario en NavbarComponent:', user);
@@ -17,16 +19,21 @@ function NavbarComponent() {
   };
 
   const handleLogout = async () => {
-    const confirmLogout = window.confirm('¿Estás seguro de cerrar sesión?');
-    if (confirmLogout) {
-      try {
-        const response = await axios.post('http://localhost:4000/logout', { rememberToken: localStorage.getItem('remember_token') });
-        console.log('Respuesta de logout:', response.data);
-        setUser(null);
-        localStorage.removeItem('remember_token');
-      } catch (error) {
-        console.error('Error al cerrar sesión:', error);
+    try {
+      const response = await axios.post('http://localhost:4000/logout', {
+        remember_token: user.remember_token 
+      });
+      if (response.status === 200) {
+        const confirmLogout = window.confirm('¿Seguro quieres cerrar la sesión?');
+        if (confirmLogout) {
+          setUser(null); 
+          alert('Sesión cerrada exitosamente');
+          navigate('/login'); 
+        }
       }
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+      alert('Hubo un error al cerrar sesión');
     }
   };
 
@@ -61,7 +68,6 @@ function NavbarComponent() {
               {dropdownVisible && (
                 <div className="dropdown-menu">
                   <a onClick={handleProfileClick}>Mi perfil</a>
-                  {/* <span onClick={handleLogout}>Cerrar sesión</span> */}
                   <a onClick={handleLogout}>Cerrar sesión</a>
                 </div>
               )}

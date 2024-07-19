@@ -12,12 +12,12 @@ function RegistroUserComponent() {
   const [roles, setRoles] = useState([]);
 
   useEffect(() => {
-    // Obtener los roles del servidor
+
     fetch("http://localhost:4000/roles")
       .then((response) => response.json())
       .then((data) => {
         setRoles(data);
-        // Seleccionar el primer rol por defecto
+       
         if (data.length > 0) {
           const adminRole = data.find(role => role._id === "6655fffe03c0d12c9dff1f3f");
           setSelectedRole(adminRole ? adminRole._id : data[0]._id);

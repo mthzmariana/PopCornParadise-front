@@ -1,8 +1,3 @@
-/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-}
-
 .login-page {
   width: 100%;
   height: 100vh;
@@ -61,22 +56,21 @@ body {
 
 .formR .img-sm {
   text-align: center;
-  width: 100%; /* Aumentado el ancho */
+  width: 100%; 
 }
 
 .formR .img-sm img {
-  width: 230px; /* Tamaño de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 230px;
+  height: auto; 
   display: block;
-  margin: -30px 9px 0; /* Centra la imagen horizontalmente */
+  margin: -30px 9px 0; 
   transition: transform 0.3s ease;
 }
 
 .formR .img-sm img:hover {
-  transform: scale(1.1); /* Agrandar la imagen al pasar el cursor por encima */
+  transform: scale(1.1);
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
   .formR {
     max-width: 300px;

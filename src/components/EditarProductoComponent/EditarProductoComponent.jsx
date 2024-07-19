@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import './EditarProductoComponent.css'; // Archivo CSS personalizado para estilos
+import './EditarProductoComponent.css';
 
 const EditarProductoComponent = () => {
   const { id } = useParams();

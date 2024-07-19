@@ -21,7 +21,6 @@
 	display: block;
 }
 
-/* Sección superior */
 .contenedor-padre {
 	background-color: #ffffff;
 	color: #212529;
@@ -66,7 +65,6 @@
 	rotate: 5deg;
 }
 
-/* Sección inferior pestañas */
 :root {
 	--color-principal: #f7931e;
 	--color-fondo: #f7931e;
@@ -107,14 +105,12 @@
 	border-color: #ffffff;
 }
 
-/* Contenido de Pestañas */
 .contenido-pestana {
 	padding: 3rem 0;
 	background: #ffffff;
 	color: #212529;
 }
 
-/* Ocultar contenido inicial */
 #pestana-1-contenido,
 #pestana-2-contenido,
 #pestana-3-contenido {

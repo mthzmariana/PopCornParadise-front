@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
   background: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -74,22 +73,20 @@ body {
 
 .formL .img-sm {
   text-align: center;
-  width: 100%; /* Aumentado el ancho */
+  width: 100%; 
 }
 
 .formL .img-sm img {
-  width: 400px; /* Tamaño de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
-  display: block;
-  margin: -50px -20px 0; /* Centra la imagen horizontalmente */
+  width: 400px; 
+  height: auto; 
+  margin: -50px -20px 0; 
   transition: transform 0.3s ease;
 }
 
 .formL .img-sm img:hover {
-  transform: scale(1.1); /* Agrandar la imagen al pasar el cursor por encima */
+  transform: scale(1.1); 
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
   .formL {
     max-width: 300px;

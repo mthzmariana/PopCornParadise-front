@@ -10,7 +10,6 @@ const RolXPermisoComponent = () => {
   const [rolxPermisoAEliminar, setRolxPermisoAEliminar] = useState(null);
   const [rolxPermisoAEditar, setRolxPermisoAEditar] = useState(null);
 
-  // Obtener todos los roles por permiso
   const obtenerRolxPermisos = async () => {
     try {
       const response = await fetch("http://localhost:4000/rolxpermiso");
@@ -21,7 +20,6 @@ const RolXPermisoComponent = () => {
     }
   };
 
-  // Obtener todos los roles
   const obtenerRoles = async () => {
     try {
       const response = await fetch("http://localhost:4000/roles");

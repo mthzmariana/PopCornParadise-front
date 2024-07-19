@@ -70,21 +70,21 @@
 .movies {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Espacio entre las películas */
-  justify-content: center; /* Centrar las películas */
+  gap: 20px; 
+  justify-content: center; 
   margin-top: 20px;
 }
 
 .movie-item {
   text-align: center;
-  flex: 1 1 calc(33.333% - 20px); /* Tres películas por fila con espacio entre ellas */
-  max-width: 300px; /* Ancho máximo del contenedor de la película */
-  margin-bottom: 20px; /* Espacio inferior para cada contenedor de película */
+  flex: 1 1 calc(33.333% - 20px); 
+  max-width: 300px; 
+  margin-bottom: 20px; 
 }
 
 .movie-item img {
-  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-  height: auto; /* Mantener la proporción de la imagen */
+  width: 100%; 
+  height: auto; 
   border-radius: 10px;
 }
 

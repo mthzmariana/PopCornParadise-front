@@ -70,14 +70,14 @@ const RolComponent = () => {
         }
       );
       console.log("Rol eliminado con éxito");
-      obtenerRoles(); // Actualiza la lista de roles después de eliminar uno
-      setRolAEliminar(null); // Resetear el estado del rol a eliminar
+      obtenerRoles(); 
+      setRolAEliminar(null);
     } catch (error) {
       console.error("Error al eliminar rol:", error);
     }
   };
 
-  // Efecto para cargar los roles cuando el componente se monta
+
   useEffect(() => {
     obtenerRoles();
   }, []);

@@ -17,7 +17,7 @@ const AdminNav = () => {
               
             </div>
             <div className="user-info">
-                <img src={PerfilFoto1} alt="Perfil" className="w-8 h-8 rounded-full" />
+                <img src={PerfilFoto1} alt="Perfil"/>
                 {user && (
                     <span className="text-white">{user.user}</span>
                 )}

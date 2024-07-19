@@ -73,14 +73,13 @@ const PermisoComponent = () => {
         }
       );
       console.log("Permiso eliminado con éxito");
-      obtenerPermisos(); // Actualiza la lista de permisos después de eliminar uno
-      setPermisoAEliminar(null); // Resetear el estado del permiso a eliminar
+      obtenerPermisos();
+      setPermisoAEliminar(null); 
     } catch (error) {
       console.error("Error al eliminar permiso:", error);
     }
   };
 
-  // Efecto para cargar los permisos cuando el componente se monta
   useEffect(() => {
     obtenerPermisos();
   }, []);
